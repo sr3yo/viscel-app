@@ -1,12 +1,16 @@
 import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron';
 
+//expose API to the renderer process
 contextBridge.exposeInMainWorld('electron', {
-  subscribeStatistics: (callback: (statistics: any) => void) => {
-    ipcRenderer.on('statistics', (_: IpcRendererEvent, stats: any) => {
-      callback(stats);
-    });
-  },
-  getStaticData: () => {
-    console.log('static');
+  ipcRenderer: {
+    send: (channel: string, ...args: any[]) => {
+      ipcRenderer.send(channel, ...args);
+    },
+
+    on: (channel: string, callback: (...args: any[]) => void) => {
+      ipcRenderer.on(channel, (_event: IpcRendererEvent, ...args: any[]) => {
+        callback(...args);
+      });
+    },
   },
 });
