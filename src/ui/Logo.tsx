@@ -12,9 +12,9 @@ export default function LogoAnimation({
   const [message, setMessage] = useState("initializing experience...");
   useEffect(() => {
     //timers for loading messages
-    const timer1 = setTimeout(() => setMessage("getting ready..."), 1000);
-    const timer2 = setTimeout(() => setMessage("opening..."), 2000);
-    const timer3 = setTimeout(() => onComplete(), 3000);
+    const timer1 = setTimeout(() => setMessage("getting ready..."), 2000);
+    const timer2 = setTimeout(() => setMessage("opening..."), 5000);
+    const timer3 = setTimeout(() => onComplete(), 8000);
 
     return () => {
       clearTimeout(timer1);
