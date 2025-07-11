@@ -14,7 +14,8 @@ app.on("ready", ()=>{
         resizable: false,
         fullscreenable: false,
         titleBarStyle: "hidden",
-        backgroundColor: "#000000",
+        transparent: true,
+        frame: false,
     });
     if(isDev()){
         mainWindow.loadURL("http://localhost:5123/");
