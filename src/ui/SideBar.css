@@ -1,0 +1,64 @@
+
+
+#profile-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  padding-right: 12px;
+  width: 100%;
+  scale: 1;
+
+}
+
+.home-text {
+  margin-left: 1px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.sidebar-container:hover .home-text {
+  opacity: 1;
+}
+
+.sidebar-container{
+  margin-left: 20px;
+}
+
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  padding-right: 180px;
+  transition: opacity 0.3s ease;
+  font-size: small;
+  font-family: sans-serif;
+
+}
+
+  .sidebar-container:hover .sidebar-links {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+
+
+.workspace-card-wrapper {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+

@@ -1,0 +1,234 @@
+#entire-login-container {
+  display: flex;
+  flex-direction: row;         
+  justify-content: center;     
+  align-items: center;         
+  height: 100vh;
+  width: 95vw;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+  z-index: 1;
+  padding: 0;
+
+}
+
+.login-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 0;
+}
+
+
+#login-background {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+  color: white;
+  width: auto;
+  height: auto;
+}
+
+#login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  height: 60vh;
+  min-width: 50vh;
+  border-radius: 8px;
+  box-shadow: none;
+  border: 0px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  position: relative;
+  margin-right: 14vw;
+}
+
+
+#welcome-message {
+  z-index: 1;
+  position: relative;
+
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+#login-container h1,
+#login-container h2,
+#login-container form {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.input-container {
+    margin-bottom: 0.5em; 
+}
+
+#login-container h2{
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#login-form input {
+    background-color: white;  
+    color: black;
+    border: 1px solid black;   
+    padding: 0.5em;          
+    border-radius: 8px;      
+    margin-bottom: 2rem;
+    width: 300px;
+}
+#login-container p{
+    font-size: 1rem;
+    color: white;
+    font-weight: 100;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+
+}
+#login-form button {
+    background: linear-gradient(to right,  darkblue, black);
+    color: white;
+    border: none;             
+    padding: 0.8em 10em;       
+    border-radius: 8px;     
+    cursor: pointer;          
+    font-size: 1rem;          
+    margin-bottom: 1rem;
+}
+
+#login-form button:hover {
+    background-color: black;
+}
+
+#greeting-message{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    grid-row: 2;
+    margin-bottom: 5rem;
+}
+
+.little-text{
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 78%;
+}
+
+#login-container p {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.blob-outer-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40vw;
+  width: 40vw;
+  min-width: 300px;
+  min-height: 300px;
+  filter: blur(100px);
+  z-index: 1;
+  pointer-events: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob-inner-container {
+  border-radius: 99999px;
+  width: 40vw;
+  height: 40vw;
+  min-width: 300px;
+  min-height: 300px;
+  overflow: hidden;
+  background-color: white;
+  transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.blob {
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(from 0deg, #FBE4D6, #261FB3, #161179, #0C0950 );
+  animation: spinBlob 12s linear infinite;
+  z-index: 1;
+}
+
+
+
+@keyframes spinBlob{
+  0% {
+    transform: rotate(0deg) scale(2);
+  }
+  100% {
+    transform: rotate(360deg) scale(2);
+  }
+}
+
+#login-form button.google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    background: #fff;
+    color: black;
+    border: 1px solid #ddd;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px 0 rgba(60,64,67,0.08);
+    cursor: pointer;
+    transition: box-shadow 0.2s, border 0.2s;
+    font-family: sans-serif;
+    border-radius: 360px;
+
+  
+}
+
+#login-form button.google-login:hover {
+    scale: 1.05;
+    box-shadow: 0 4px 16px 0 rgba(60,64,67,0.12);
+    border: 1px solid #aaa;
+}
+
+#login-form button.google-login img {
+    width: 20px;
+    height: 20px;
+   
+}

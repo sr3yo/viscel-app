@@ -1,0 +1,57 @@
+.logo{
+    font-size: 2em;
+    animation: logo-spin 4s ease infinite;
+    align-items: center;
+    
+}
+
+@keyframes logo-spin {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.logo img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 2px #222,          
+        0 4px 24px 0 #00eaff88,  
+        0 2px 30px 0 #fff4;  
+          
+}
+
+.logo-subtitle{
+    font-size: 0.7em;
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 3em;
+
+
+}
+
+.loading-screen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black; 
+  z-index: 9999; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+
+
+  
+}
+
+.loading-screen > *{
+    z-index: 10000;
+}
