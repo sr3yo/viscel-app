@@ -10,17 +10,22 @@ app.on("ready", ()=>{
     
             preload: getPreloadPath(),
         },
+        show: false,
         width: 400,
         height: 500,
         resizable: false,
         fullscreenable: false,
         titleBarStyle: "hidden",
-        transparent: true,
+        transparent: false,
         frame: false, 
         backgroundColor: "#00000000", 
         
         
         
+
+    });
+    mainWindow.once('ready-to-show', () => {
+    mainWindow.show();  // show window when ready
     });
     if(isDev()){
         mainWindow.loadURL("http://localhost:5123/");
@@ -36,5 +41,6 @@ app.on("ready", ()=>{
         mainWindow.setSize(1920,1080);
         mainWindow.center();
     });
+    
     
 });
