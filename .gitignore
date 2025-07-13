@@ -31,3 +31,4 @@ dist-electron/
 .env
 *.log
 .DS_Store
+
