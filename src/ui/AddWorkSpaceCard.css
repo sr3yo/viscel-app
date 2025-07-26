@@ -1,6 +1,4 @@
-.card{
-    width: 100px;
-    height: 150px;
-    border-radius: 20px;
-    border: 1px solid black;
+#widget{
+    height: 100px;
+    width: 80px;
 }
