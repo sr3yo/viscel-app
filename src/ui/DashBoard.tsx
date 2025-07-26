@@ -1,9 +1,11 @@
 import "./DashBoard.css";
 import React from "react";
+import { useState } from "react";
 import SideBar from "./SideBar";
 import AddWorkspaceCard from "./AddWorkspaceCard";
 
 export default function DashBoard() {
+  const [showPopup, setShowPopup] = useState(false);
   return (
     <div className="dashboard-container">
       <div className="blobs-container">
@@ -16,9 +18,16 @@ export default function DashBoard() {
         <SideBar></SideBar>
         <div className="widget-container">
           <div className="widget-panel">
-            <AddWorkspaceCard></AddWorkspaceCard>
+            <AddWorkspaceCard
+              onClick={() => setShowPopup(true)}
+            ></AddWorkspaceCard>
           </div>
         </div>
+        {showPopup && (
+          <div className="popup">
+            <button onClick={() => setShowPopup(false)}>x</button>
+          </div>
+        )}
       </div>
     </div>
   );
