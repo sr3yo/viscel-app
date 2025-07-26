@@ -30,25 +30,8 @@
 }
 
 
-.sidebar-links {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  opacity: 0;
-  padding-right: 180px;
-  transition: opacity 0.3s ease;
-  font-size: small;
-  font-family: sans-serif;
 
-}
 
-  .sidebar-container:hover .sidebar-links {
-    opacity: 1;
-    pointer-events: auto;
-  }
 
 
 
