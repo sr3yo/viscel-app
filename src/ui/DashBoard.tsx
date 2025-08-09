@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import SideBar from "./SideBar";
 import AddWorkspaceCard from "./AddWorkspaceCard";
+import AppPopups from "./AppPopups";
 
 export default function DashBoard() {
   const [showPopup, setShowPopup] = useState(false);
@@ -23,11 +24,7 @@ export default function DashBoard() {
             ></AddWorkspaceCard>
           </div>
         </div>
-        {showPopup && (
-          <div className="popup">
-            <button onClick={() => setShowPopup(false)}>x</button>
-          </div>
-        )}
+        {showPopup && <AppPopups onClose={() => setShowPopup(false)} />}
       </div>
     </div>
   );
