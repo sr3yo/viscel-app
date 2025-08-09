@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./AppPopups.css";
 
 export default function AppPopups({ onClose }: { onClose: () => void }) {
   return (
