@@ -1,5 +1,3 @@
-Got it! I’ll expand your Viscel README with more technical details while keeping it clear and readable:
-
 ---
 
 # Viscel
